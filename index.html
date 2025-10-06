@@ -1,0 +1,200 @@
+---
+layout: default
+title: Cosmic Wanderer'in Dünyası
+---
+
+<!doctype html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Web Tabanlı Oyunlar " />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --card:#111216;
+      --text:#e6e7ea;
+      --muted:#a3a8b1;
+      --acc:#6ee7b7;
+      --border: rgba(230,231,234,0.12);
+      --shadow: 0 12px 28px rgba(0,0,0,0.28);
+    }
+    [data-theme="light"]{
+      --bg:#fbfbfc; --card:#ffffff; --text:#16181d; --muted:#5b6472; --acc:#0ea5e9;
+      --border: rgba(22,24,29,0.12);
+      --shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height: 1.8;
+    }
+
+    .container{max-width:1000px;margin:auto;padding:24px}
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: saturate(140%) blur(6px);
+      background: color-mix(in oklab, var(--bg) 85%, transparent);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:10px 24px; max-width:1000px; margin:0 auto;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.4px}
+    .badge{
+      font-size:12px; padding:3px 8px; border-radius:999px;
+      border:1px solid var(--border); color:var(--muted)
+    }
+    nav a{
+      text-decoration:none; color:var(--text); opacity:.85; font-weight:600;
+      padding:8px 10px; border-radius:8px;
+    }
+    nav a:hover{opacity:1; background:color-mix(in oklab, var(--text) 10%, transparent)}
+    .toggle{
+      border:1px solid var(--border);
+      padding:8px 12px; border-radius:10px; background:var(--card);
+      cursor:pointer; font-weight:700;
+    }
+    .toggle:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
+    header.hero{ padding: 38px 0 12px; text-align:center; }
+    .hero-logo{ display:block; margin:0 auto 14px; width:120px; height:120px; border-radius:50%; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,0.25) }
+    header.hero h1{
+      margin:0; font-size:clamp(28px, 4.2vw, 44px); font-weight:900; letter-spacing:.6px;
+      background: linear-gradient(120deg, var(--acc), color-mix(in oklab, var(--text) 80%, transparent));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    header.hero p{ margin:.35rem 0; color:var(--muted) }
+
+    .section{ padding:30px 0; border-bottom:1px solid var(--border) }
+    .section h2{ margin:0 0 14px; font-size:1.6rem }
+    p{ margin:12px 0 16px }
+    ul{ margin:12px 0 18px; padding-left:1.2rem }
+    li + li{ margin-top:8px }
+    a{ color:var(--acc); font-weight:600 }
+    .card-grid{ display:grid; grid-template-columns: repeat( auto-fit, minmax(260px,1fr) ); gap:18px; margin-top:20px }
+    .card-link{ text-decoration:none; color:inherit; display:block }
+    .card{
+      background:var(--card); padding:18px; border-radius:14px;
+      border:1px solid var(--border); box-shadow:var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .card:hover{
+      transform:translateY(-4px);
+      border-color: color-mix(in oklab, var(--acc) 45%, var(--border));
+      box-shadow:0 16px 34px color-mix(in oklab, var(--acc) 20%, black);
+    }
+    .card h3{ margin-top:0 }
+    .card p{ color:var(--muted) }
+    .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease }
+    .reveal.visible{ opacity:1; transform:none }
+    footer.site-footer{ text-align:center; color:var(--muted); font-size:14px; padding:18px 0 }
+    .to-top{
+      position:fixed; right:18px; bottom:18px; z-index:20;
+      border:1px solid var(--border); background:var(--card); color:var(--text);
+      padding:10px 12px; border-radius:12px; cursor:pointer; box-shadow:var(--shadow); display:none;
+    }
+    .to-top.show{ display:block }
+    .to-top:hover{ transform:translateY(-2px) }
+    @media (max-width:640px){ .section{padding:24px 0} }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span>COSMİC WANDERER'İN DÜNYASI</span>
+        <span class="badge">beta</span>
+      </div>
+      <nav>
+        <a href="#Giriş">Giriş</a>
+        <a href="#konular">İçerik</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+      <button id="themeToggle" class="toggle" aria-label="Tema değiştir">Tema</button>
+    </div>
+  </div>
+
+     <h1>Cosmic Wanderer'in Dünyası</h1>
+    <p>Web Tabanlı Oyunlar</p>
+  </header>
+
+  <main class="container">
+    <section id="Giriş" class="section reveal">
+      <h2>Hoş geldin</h2>
+      <p>Burada, web üzerinden çalışabilen çeşitli eğlenceli uygulamalar ve 3d oyunlar paylaşıyorum.</p>
+
+  
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="konular" class="section reveal">
+      <h2>Sitemin İçeriği:</h2>
+      <ul>
+        <li><b>Kemienformatik:</b> WebGL, HTML5, EMscriptten ile yazılmış uygulamalar</li>
+        <li><b>Biyoenformatik:</b>WebGL, HTML5 ile yazılmış oyunlar</li>
+      </ul>
+    </section>
+
+    <section id="iletisim" class="section reveal">
+      <h2>İletişim</h2>
+      <p>Eğer paylaşmak istediğiniz bir şey varsa:</p>
+      <ul>
+        <li>Sitenin Kurucusunun LinkedIn Hesabı: <a href="https://www.linkedin.com/in/ahmetguveli/">linkedin.com/in/ahmetguveli</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <span id="y"></span> • Cosmic Wanderer'in Dünyası (GELİŞTİRİLME AŞAMASINDA) — GitHub Pages ile yayınlandı
+  </footer>
+
+  <button id="toTop" class="to-top" aria-label="Yukarı dön">↑</button>
+
+  <script>
+    // Yıl
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Tema yönetimi
+    const root = document.documentElement;
+    const stored = localStorage.getItem('theme');
+    if (stored === 'light') root.setAttribute('data-theme','light');
+    document.getElementById('themeToggle').addEventListener('click', ()=>{
+      const isLight = root.getAttribute('data-theme') === 'light';
+      root.setAttribute('data-theme', isLight ? '' : 'light');
+      localStorage.setItem('theme', isLight ? 'dark' : 'light');
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el=> io.observe(el));
+
+    // Yukarı dön butonu
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', ()=>{
+      if (window.scrollY > 500) toTop.classList.add('show');
+      else toTop.classList.remove('show');
+    });
+    toTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+  </script>
+</body>
+</html>
+
+
+
