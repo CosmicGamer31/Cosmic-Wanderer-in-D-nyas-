@@ -1,7 +1,7 @@
-<h1 align="center">İn Silico Pharmacy: Hesaplamalı Kimya ve Biyoloji</h1>
+<h1 align="center">Cosmic Wanderer'in Dünyası</h1>
 
 <p align="center">
-  Biyoenformatik ve Kemienformatik  
+  HTML5,WebGl veya EMscrippten gibi araçlarla yazılmış uygulamalar
   <br>
   <em>Üzerine çalışmalarım, interaktif tools ve daha fazlası</em>
 </p>
@@ -11,26 +11,21 @@
 ##  Hoş geldin
 
 Merhaba!  
-Burası benim **Kemienformatik,Hesaplamalı Kimya ve Biyoloji sayfam**. Burada;
+Burası benim  sayfam. Burada;
 
-- Kemienformatik ve Hesaplamalı Kimya ve Biyoloji ile ilgili geliştirdiğim interaktif uygulamaları ve araçları paylaşıyorum.  
+- Geliştirdiğim interaktif oyunları ve uygulamaları paylaşıyorum.  
 
 
 
 ##  Neler bulacaksın?
 
-- **Kemienformatik ile ilgili şeyler**: Moleküler modelleme ve buna benzer şeyler 
-- **Hesaplamalı Kimya ve Biyoloji Uygulamaları ve Geliştirdiğim İnteraktif Araçlar**
+- **3D WebGL, HTML5 vs. gibi araçlarla yazılmış Eğlenceli Oyunlar ve Uygulamalar**: 
+- **Geliştirdiğim İnteraktif Araçlar**
  
 
 ---
 
-##  İletişim
 
-Eğer paylaşmak istediğiniz bir şey varsa:  
-
-
-- E-posta: insilicopharmacy@gmail.com
 
 ---
 
