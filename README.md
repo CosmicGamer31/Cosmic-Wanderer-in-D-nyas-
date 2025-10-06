@@ -1,9 +1,9 @@
 <h1 align="center">Cosmic Wanderer'in Dünyası</h1>
 
 <p align="center">
-  HTML5,WebGl veya EMscrippten gibi araçlarla yazılmış uygulamalar
+  HTML5,WebGl veya EMscrippten gibi araçlarla yazılmış oyunlar
   <br>
-  <em>Üzerine çalışmalarım, interaktif tools ve daha fazlası</em>
+  <em>Üzerine çalışmalarım</em>
 </p>
 
 ---
@@ -13,14 +13,14 @@
 Merhaba!  
 Burası benim  sayfam. Burada;
 
-- Geliştirdiğim interaktif oyunları ve uygulamaları paylaşıyorum.  
+- Geliştirdiğim interaktif oyunları  paylaşıyorum.  
 
 
 
 ##  Neler bulacaksın?
 
-- **3D WebGL, HTML5 vs. gibi araçlarla yazılmış Eğlenceli Oyunlar ve Uygulamalar**: 
-- **Geliştirdiğim İnteraktif Araçlar**
+- **3D WebGL, HTML5 vs. gibi araçlarla yazılmış Eğlenceli Oyunlar**: 
+
  
 
 ---
